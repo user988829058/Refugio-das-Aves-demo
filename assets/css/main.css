@@ -60,6 +60,11 @@
   --raio-med: 3px;
 
   --transicao: 460ms cubic-bezier(.22, .61, .36, 1);
+
+  /* A página é de tema único por decisão de projeto — papel claro, com seções
+     escuras. Declarar isso evita que o navegador (ou um host embutido) pinte
+     controles e fundo no tema do sistema. */
+  color-scheme: light;
 }
 
 /* Seções escuras: invertem o tema sem tocar num único componente. */
