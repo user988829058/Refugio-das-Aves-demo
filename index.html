@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refúgio das Aves — duas cabanas entre o campo e a mata</title>
+<meta name="description" content="Duas cabanas sozinhas numa clareira, entre o campo aberto e a borda da mata: a Cabana Maritaca, de frente para o campo, e a Cabana Tucano, encostada nas árvores altas.">
+<meta name="theme-color" content="#EFE9DC">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Refúgio das Aves — duas cabanas entre o campo e a mata">
+<meta property="og:description" content="Uma clareira, duas cabanas e o resto é mata. Acorde com o coro do amanhecer e veja o bando voltar no fim da tarde.">
+<meta property="og:image" content="assets/img/heroi.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/marca.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/img/heroi.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..700;1,6..72,200..600&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+<!-- Marca que há JS antes da primeira pintura: sem isto, as revelações ao rolar
+     deixariam a página em branco para quem não executa scripts. -->
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ícones ------------------------------------------------------------- -->
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-mata" viewBox="0 0 24 24"><path d="M8 21.4v-3.2M8 18.2H4.4L8 12.4H5.8L9.2 6.8l3.4 5.6h-2.2l3.6 5.8H8M17.2 21.4v-2.6M17.2 18.8c-2 0-3.3-1.3-3.3-3.1 0-2.1 1.7-3.6 3.3-5.2 1.7 1.6 3.3 3.1 3.3 5.2 0 1.8-1.3 3.1-3.3 3.1Z"/></symbol>
+  <symbol id="i-campo" viewBox="0 0 24 24"><path d="M2.4 20.6h19.2M6.4 20.6c0-3.4.7-5.6 2.2-7.4M6.4 20.6c0-2.6-.9-4.3-2.4-5.8M12.4 20.6c0-4.3.9-7 2.8-9.6M12.4 20.6c0-3-1.1-5.1-2.8-6.8M18.4 20.6c0-3.2.6-5.3 1.9-7"/></symbol>
+  <symbol id="i-varanda" viewBox="0 0 24 24"><path d="M2.6 12.6 12 5.4l9.4 7.2M3.4 20.8h17.2M5.2 20.8v-6.4M18.8 20.8v-6.4M5.2 17.2h13.6M9.6 17.2v3.6M14.4 17.2v3.6"/></symbol>
+  <symbol id="i-cozinha" viewBox="0 0 24 24"><path d="M3.2 10.4h11.4v4.4a5.7 5.7 0 0 1-11.4 0zM14.6 12.2h5.6M18.2 8.2c1.5.9 2.2 2.1 2.2 3.5M7.4 10.4V6.8M11 10.4V7.6M8.9 20.6h6"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 19.2h.01M8.4 15.4a5 5 0 0 1 7.2 0M5.2 12.1a9.6 9.6 0 0 1 13.6 0M2 8.8a14.2 14.2 0 0 1 20 0"/></symbol>
+  <symbol id="i-carro" viewBox="0 0 24 24"><path d="m4 14.6 1.9-5.7a2 2 0 0 1 1.9-1.4h8.4a2 2 0 0 1 1.9 1.4l1.9 5.7M4 14.6h16M4 14.6v3.9h3.2v-1.6M20 14.6v3.9h-3.2v-1.6M7.4 17h9.2"/></symbol>
+  <symbol id="i-lenha" viewBox="0 0 24 24"><path d="M12 3.2c2.7 3.2 4.2 5.4 4.2 7.7a4.2 4.2 0 0 1-8.4 0c0-1.4.5-2.6 1.5-3.6.3 1.5 1 2.3 2.1 2.6-.3-2.2.2-4.3.6-6.7ZM4.2 20.8l15.6-3.8M4.2 17l15.6 3.8"/></symbol>
+  <symbol id="i-binoculo" viewBox="0 0 24 24"><circle cx="7.2" cy="16.8" r="3.9"/><circle cx="16.8" cy="16.8" r="3.9"/><path d="M6 13.4 7.9 4.9a1.4 1.4 0 0 1 1.4-1.1h1.3A1.4 1.4 0 0 1 12 5.2v8.6M18 13.4 16.1 4.9a1.4 1.4 0 0 0-1.4-1.1h-1.3A1.4 1.4 0 0 0 12 5.2M10.4 16.8h3.2"/></symbol>
+  <symbol id="i-nao-fumar" viewBox="0 0 24 24"><path d="M3 3l18 18M3.4 14.4h11.4v4.2H7M17.4 14.4h3.2v4.2h-3.2M18.2 11.2c1.4-.6 2.1-1.6 2.1-2.9 0-1.6-1.1-2.7-2.7-3M15.2 12c.9-.5 1.4-1.3 1.4-2.2"/></symbol>
+  <symbol id="i-pet" viewBox="0 0 24 24"><circle cx="6.6" cy="10.4" r="2"/><circle cx="17.4" cy="10.4" r="2"/><circle cx="10" cy="6.4" r="2"/><circle cx="14" cy="6.4" r="2"/><path d="M12 12.6c-2.6 0-4.6 1.9-4.6 4.1 0 1.6 1.2 2.7 2.8 2.7.9 0 1.3-.3 1.8-.3s.9.3 1.8.3c1.6 0 2.8-1.1 2.8-2.7 0-2.2-2-4.1-4.6-4.1Z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M4 12h15.4M13.2 5.8 19.4 12l-6.2 6.2"/></symbol>
+  <symbol id="i-mais" viewBox="0 0 24 24"><path d="M12 5.2v13.6M5.2 12h13.6"/></symbol>
+  <symbol id="i-ave" viewBox="0 0 24 24"><path d="M2.6 15.4c3-4.6 5.6-3.8 8.4-.6 2.8-4.2 5.6-5 10.4-1.6"/></symbol>
+</defs></svg>
+
+<!-- cabeçalho ---------------------------------------------------------- -->
+<header class="topo" id="topo">
+  <div class="topo__interno">
+    <a class="marca" href="#topo" aria-label="Refúgio das Aves — início">
+      <svg class="marca__sinal" viewBox="0 0 40 40" aria-hidden="true" fill="none">
+        <circle cx="20" cy="20" r="18.4" stroke="currentColor" stroke-width="1.1" opacity=".45"/>
+        <path d="M6.4,29.4 A4.1,3.6 0 0 1 14.6,29.4 Z M13.4,29.4 A5.4,4.8 0 0 1 24.2,29.4 Z M23,29.4 A4.4,3.9 0 0 1 31.8,29.4 Z" fill="currentColor" opacity=".38"/>
+        <path d="M5.6,29.4 H34.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".45"/>
+        <path d="M12.4,18.8 C15,14.6 17.4,15.4 19.8,18.2 C22.2,15.4 24.6,14.6 27.2,18.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="marca__texto">
+        <b>Refúgio das Aves</b>
+        <small>Maritaca · Tucano</small>
+      </span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#refugio">O refúgio</a>
+      <a href="#cabanas">As cabanas</a>
+      <a href="#aves">As aves</a>
+      <a href="#dia">Um dia aqui</a>
+      <a href="#localizacao">Como chegar</a>
+      <a href="#perguntas">Dúvidas</a>
+      <a class="botao botao--solido menu__cta" href="#reserva">Consultar datas</a>
+    </nav>
+
+    <div class="topo__acoes">
+      <a class="botao botao--solido botao--pequeno" href="#reserva">Consultar datas</a>
+      <button class="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- herói --------------------------------------------------------------- -->
+<section class="heroi mata" id="heroi">
+  <div class="heroi__cena" aria-hidden="true" data-parallaxe="0.16">
+    <img class="heroi__imagem" src="assets/img/heroi.svg" alt="" width="1920" height="1080" fetchpriority="high">
+    <div class="heroi__foto"></div>
+    <div class="bruma bruma--a"></div>
+    <div class="bruma bruma--b"></div>
+  </div>
+  <div class="heroi__veu" aria-hidden="true"></div>
+
+  <div class="heroi__texto miolo">
+    <p class="sobrancelha" data-revelar>
+      <span class="ponto"></span> Borda de mata · Campo aberto
+    </p>
+    <h1 class="heroi__titulo" data-revelar data-revelar-atraso="1">
+      <span>Acorde com a</span>
+      <span><em>mata</em> inteira</span>
+      <span>cantando.</span>
+    </h1>
+    <p class="heroi__linha" data-revelar data-revelar-atraso="2">
+      Duas cabanas sozinhas numa clareira, entre o campo aberto e a primeira linha de árvores.
+      Sem vizinho de parede, sem estrada passando — e nada por cima além do que voa.
+    </p>
+    <div class="heroi__acoes" data-revelar data-revelar-atraso="3">
+      <a class="botao botao--solido" href="#reserva">
+        Consultar datas <svg aria-hidden="true"><use href="#i-seta"/></svg>
+      </a>
+      <a class="botao botao--vazado" href="#cabanas">Ver as duas cabanas</a>
+    </div>
+    <p class="heroi__selo" data-revelar data-revelar-atraso="4">
+      <b>a partir de R$&nbsp;540</b><span>/noite</span>
+      <i></i>
+      duas cabanas · cancelamento gratuito até 48&nbsp;h antes
+    </p>
+  </div>
+
+  <div class="heroi__rodape">
+    <a class="rolar" href="#refugio" aria-label="Rolar para o conteúdo"><span></span>role</a>
+    <div class="letreiro" aria-hidden="true">
+      <div class="letreiro__pista">
+        <span>Duas cabanas</span><i>·</i><span>Varanda privativa</span><i>·</i><span>Lareira a lenha</span><i>·</i>
+        <span>Cesta de café na varanda</span><i>·</i><span>Trilha própria</span><i>·</i><span>Campo aberto</span><i>·</i>
+        <span>Wi-Fi na cabana</span><i>·</i><span>Escuro de verdade à noite</span><i>·</i>
+        <span>Duas cabanas</span><i>·</i><span>Varanda privativa</span><i>·</i><span>Lareira a lenha</span><i>·</i>
+        <span>Cesta de café na varanda</span><i>·</i><span>Trilha própria</span><i>·</i><span>Campo aberto</span><i>·</i>
+        <span>Wi-Fi na cabana</span><i>·</i><span>Escuro de verdade à noite</span><i>·</i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- barra de reserva ---------------------------------------------------- -->
+<section class="reserva" id="reserva" aria-labelledby="reserva-titulo">
+  <div class="miolo">
+    <h2 class="oculto-visual" id="reserva-titulo">Consultar disponibilidade</h2>
+    <form class="reserva__caixa" id="form-reserva" novalidate>
+      <div class="campo campo--escolha">
+        <label for="cabana">Cabana</label>
+        <select id="cabana" name="cabana">
+          <option value="maritaca">Maritaca · R$ 540</option>
+          <option value="tucano">Tucano · R$ 690</option>
+          <option value="qualquer">Tanto faz</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="entrada">Entrada</label>
+        <input type="date" id="entrada" name="entrada" required>
+      </div>
+      <div class="campo">
+        <label for="saida">Saída</label>
+        <input type="date" id="saida" name="saida" required>
+      </div>
+      <div class="campo campo--passos">
+        <label id="rotulo-hospedes">Hóspedes</label>
+        <div class="passos" role="group" aria-labelledby="rotulo-hospedes">
+          <button type="button" data-passo="-1" aria-label="Menos um hóspede">−</button>
+          <output id="hospedes" aria-live="polite">2</output>
+          <button type="button" data-passo="1" aria-label="Mais um hóspede">+</button>
+        </div>
+      </div>
+      <div class="reserva__resumo" id="resumo-reserva" aria-live="polite">
+        <b>Escolha as datas</b>
+        <span>estimativa a partir de R$&nbsp;540/noite</span>
+      </div>
+      <button class="botao botao--solido" type="submit">
+        Consultar <svg aria-hidden="true"><use href="#i-seta"/></svg>
+      </button>
+    </form>
+
+    <!-- Preenchida pelo JS depois do envio; some de novo se as datas mudarem. -->
+    <div class="reserva__saida" id="saida-reserva" hidden>
+      <p class="reserva__saida-linha" id="texto-reserva"></p>
+      <div class="reserva__saida-acoes">
+        <a class="botao botao--solido botao--pequeno" id="reserva-whatsapp" href="#" target="_blank" rel="noopener">
+          Enviar no WhatsApp <svg aria-hidden="true"><use href="#i-seta"/></svg>
+        </a>
+        <a class="botao botao--vazado botao--pequeno" id="reserva-email" href="#">Enviar por e-mail</a>
+      </div>
+    </div>
+
+    <p class="reserva__nota">
+      O pedido chega já preenchido com a cabana, as datas e o número de hóspedes.
+      A confirmação e o valor final vêm na resposta.
+      <b>Nesta demonstração o telefone e o e-mail são fictícios.</b>
+    </p>
+  </div>
+</section>
+
+<!-- o refúgio ----------------------------------------------------------- -->
+<section class="refugio" id="refugio">
+  <div class="miolo refugio__grade">
+    <div class="refugio__lado">
+      <p class="sobrancelha" data-revelar><span class="ponto"></span> O refúgio</p>
+      <h2 class="titulo-secao" data-revelar>
+        Uma clareira,<br>duas cabanas<br>e <em>o resto é mata</em>.
+      </h2>
+    </div>
+    <div class="refugio__corpo">
+      <p class="destaque" data-revelar>
+        O Refúgio das Aves fica exatamente onde o campo aberto encosta na mata — numa clareira
+        de pouco mais de um hectare, com uma cabana em cada ponta e nenhuma outra construção à vista.
+      </p>
+      <p data-revelar data-revelar-atraso="1">
+        Não há recepção, restaurante nem horário de nada. Há duas chaves, duas varandas voltadas
+        para lados diferentes da clareira e uma trilha curta ligando uma cabana à outra — que quase
+        ninguém usa, porque a graça é justamente não encontrar o outro hóspede.
+      </p>
+      <p data-revelar data-revelar-atraso="1">
+        Quem chega no fim da tarde pega o bando de maritacas voltando para dormir na mata.
+        Quem acorda cedo pega o coro do amanhecer, que começa no escuro e não pede licença.
+      </p>
+
+      <ul class="numeros" data-revelar data-revelar-atraso="2">
+        <li><b>1,2 ha</b><span>de clareira cercada de mata</span></li>
+        <li><b>2 cabanas</b><span>sem nenhuma parede em comum</span></li>
+        <li><b>+80 aves</b><span>já registradas na propriedade</span></li>
+        <li><b>15h / 11h</b><span>check-in e check-out, sem fila</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- as cabanas ---------------------------------------------------------- -->
+<section class="cabanas" id="cabanas">
+  <div class="miolo">
+    <header class="secao__cabeca">
+      <div>
+        <p class="sobrancelha" data-revelar><span class="ponto"></span> As acomodações</p>
+        <h2 class="titulo-secao" data-revelar>Duas cabanas.<br><em>Uma clareira só.</em></h2>
+      </div>
+      <p class="secao__apoio" data-revelar data-revelar-atraso="1">
+        Ficam em pontas opostas do gramado, de costas uma para a outra. Cada varanda olha para um
+        lado diferente — e é isso, mais que a metragem, que separa as duas.
+      </p>
+    </header>
+
+    <!-- Maritaca -->
+    <article class="cabana cabana--maritaca" id="maritaca">
+      <figure class="cabana__cena" data-revelar>
+        <img src="assets/img/cabana-maritaca.svg" data-foto="foto-maritaca.webp"
+             alt="A Cabana Maritaca no campo aberto, com a borda da mata ao fundo"
+             width="1200" height="1500" loading="lazy" decoding="async">
+        <span class="cabana__etiqueta"><i></i>Varanda para o campo</span>
+      </figure>
+
+      <div class="cabana__ficha" data-revelar data-revelar-atraso="1">
+        <p class="cabana__nome">
+          <span class="cabana__indice">01</span>
+          Cabana <b>Maritaca</b>
+        </p>
+        <h3>A menor das duas,<br>de frente para o <em>campo aberto</em>.</h3>
+        <p>
+          Duas águas, madeira por dentro e por fora, e uma varanda que avança sobre a grama alta.
+          Olha para oeste: pega o campo inteiro de frente e o sol se pondo atrás da linha de árvores.
+        </p>
+        <p>
+          É por cima dela que o bando passa todo fim de tarde, indo dormir na mata — barulhento,
+          pontual e completamente indiferente a você.
+        </p>
+
+        <dl class="ficha-tecnica">
+          <div><dt>Hóspedes</dt><dd>até 3 pessoas</dd></div>
+          <div><dt>Área</dt><dd>38 m², em um piso</dd></div>
+          <div><dt>Camas</dt><dd>1 casal + 1 solteiro</dd></div>
+          <div><dt>Varanda</dt><dd>oeste, para o campo</dd></div>
+          <div><dt>Melhor hora</dt><dd>fim de tarde</dd></div>
+        </dl>
+
+        <div class="cabana__fecho">
+          <p class="ficha__preco"><b>R$&nbsp;540</b> <span>/ noite</span></p>
+          <a class="botao botao--solido" href="#reserva" data-escolher="maritaca">
+            Consultar a Maritaca <svg aria-hidden="true"><use href="#i-seta"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tucano -->
+    <article class="cabana cabana--tucano cabana--invertida" id="tucano">
+      <figure class="cabana__cena" data-revelar>
+        <img src="assets/img/cabana-tucano.svg" data-foto="foto-tucano.webp"
+             alt="A Cabana Tucano encostada na borda da mata, com a faixa de vidro voltada para as árvores"
+             width="1200" height="1500" loading="lazy" decoding="async">
+        <span class="cabana__etiqueta"><i></i>Varanda para a mata</span>
+      </figure>
+
+      <div class="cabana__ficha" data-revelar data-revelar-atraso="1">
+        <p class="cabana__nome">
+          <span class="cabana__indice">02</span>
+          Cabana <b>Tucano</b>
+        </p>
+        <h3>A maior, encostada<br>na <em>borda da mata</em>.</h3>
+        <p>
+          Água única e uma faixa de vidro de ponta a ponta, voltada para as árvores altas.
+          Olha para leste: a primeira luz entra na cabana antes de chegar ao campo.
+        </p>
+        <p>
+          É dali que sai o tucano, quase sempre entre sete e oito da manhã, na mesma
+          figueira — com sorte, café na mão e nenhum movimento brusco.
+        </p>
+
+        <dl class="ficha-tecnica">
+          <div><dt>Hóspedes</dt><dd>até 4 pessoas</dd></div>
+          <div><dt>Área</dt><dd>56 m², em um piso</dd></div>
+          <div><dt>Camas</dt><dd>1 casal + 1 sofá-cama</dd></div>
+          <div><dt>Varanda</dt><dd>leste, para a mata</dd></div>
+          <div><dt>Melhor hora</dt><dd>primeira luz</dd></div>
+        </dl>
+
+        <div class="cabana__fecho">
+          <p class="ficha__preco"><b>R$&nbsp;690</b> <span>/ noite</span></p>
+          <a class="botao botao--solido" href="#reserva" data-escolher="tucano">
+            Consultar a Tucano <svg aria-hidden="true"><use href="#i-seta"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- comparação -->
+    <div class="confronto" data-revelar>
+      <h3 class="confronto__titulo">Qual das duas é a sua?</h3>
+      <table class="confronto__tabela">
+        <caption class="oculto-visual">Comparação entre a Cabana Maritaca e a Cabana Tucano</caption>
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col"><span class="marcador marcador--maritaca"></span>Maritaca</th>
+            <th scope="col"><span class="marcador marcador--tucano"></span>Tucano</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Para quantos</th><td data-rotulo="Maritaca">até 3</td><td data-rotulo="Tucano">até 4</td></tr>
+          <tr><th scope="row">Área</th><td data-rotulo="Maritaca">38 m²</td><td data-rotulo="Tucano">56 m²</td></tr>
+          <tr><th scope="row">A varanda olha para</th><td data-rotulo="Maritaca">o campo aberto</td><td data-rotulo="Tucano">a borda da mata</td></tr>
+          <tr><th scope="row">Luz</th><td data-rotulo="Maritaca">pôr do sol na varanda</td><td data-rotulo="Tucano">nascer do sol na cama</td></tr>
+          <tr><th scope="row">Lareira a lenha</th><td data-rotulo="Maritaca">sim</td><td data-rotulo="Tucano">sim</td></tr>
+          <tr><th scope="row">Diária</th><td data-rotulo="Maritaca"><b>R$ 540</b></td><td data-rotulo="Tucano"><b>R$ 690</b></td></tr>
+        </tbody>
+      </table>
+      <p class="confronto__nota">
+        Dá para reservar as duas juntas — nesse caso a clareira inteira fica para o seu grupo.
+        Fale com a gente antes de fechar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- galeria ------------------------------------------------------------- -->
+<section class="galeria" id="galeria" aria-labelledby="galeria-titulo">
+  <div class="miolo galeria__cabeca">
+    <h2 class="titulo-secao" id="galeria-titulo" data-revelar>A clareira,<br>de vários ângulos.</h2>
+    <p class="galeria__dica" data-revelar data-revelar-atraso="1">arraste para o lado →</p>
+  </div>
+
+  <div class="galeria__pista" id="pista-galeria" tabindex="0" role="region" aria-label="Galeria de imagens, navegue com as setas do teclado">
+    <figure><img src="assets/img/galeria-1.svg" data-foto="foto-galeria-1.webp" alt="A borda da mata na neblina da manhã" width="1000" height="1250" loading="lazy" decoding="async"><figcaption>A borda da mata, antes das sete</figcaption></figure>
+    <figure class="larga"><img src="assets/img/galeria-2.svg" data-foto="foto-galeria-2.webp" alt="A Cabana Maritaca no campo, no fim da tarde" width="1400" height="1000" loading="lazy" decoding="async"><figcaption>A Maritaca e a trilha que corta o campo</figcaption></figure>
+    <figure><img src="assets/img/galeria-3.svg" data-foto="foto-galeria-3.webp" alt="As árvores altas da borda da mata vistas de baixo" width="1000" height="1250" loading="lazy" decoding="async"><figcaption>As árvores altas, onde o tucano aparece</figcaption></figure>
+    <figure class="larga"><img src="assets/img/galeria-6.svg" data-foto="foto-galeria-4.webp" alt="A Cabana Tucano encostada na mata, com a trilha à frente" width="1400" height="1000" loading="lazy" decoding="async"><figcaption>A Tucano, vista de quem chega pela trilha</figcaption></figure>
+    <figure><img src="assets/img/galeria-5.svg" data-foto="foto-galeria-5.webp" alt="O campo aberto na primeira luz do dia" width="1000" height="1250" loading="lazy" decoding="async"><figcaption>O campo, na primeira luz</figcaption></figure>
+    <figure class="larga"><img src="assets/img/galeria-4.svg" data-foto="foto-galeria-6.webp" alt="A clareira à noite, com a luz da cabana acesa" width="1400" height="1000" loading="lazy" decoding="async"><figcaption>Escuro de verdade, e uma janela acesa</figcaption></figure>
+  </div>
+
+  <div class="miolo">
+    <div class="galeria__barra" aria-hidden="true"><i id="progresso-galeria"></i></div>
+  </div>
+</section>
+
+<!-- as aves ------------------------------------------------------------- -->
+<section class="aves" id="aves" aria-labelledby="aves-titulo">
+  <div class="miolo aves__grade">
+    <figure class="aves__cena" data-revelar>
+      <img src="assets/img/aves.svg" data-foto="foto-aves.webp"
+           alt="Bando cruzando o céu acima da linha de árvores" width="1000" height="1250" loading="lazy" decoding="async">
+      <figcaption>O bando das cinco e meia, visto da varanda da Maritaca</figcaption>
+    </figure>
+
+    <div class="aves__texto">
+      <p class="sobrancelha" data-revelar><span class="ponto"></span> As aves</p>
+      <h2 class="titulo-secao" id="aves-titulo" data-revelar>Quem passa<br>por aqui, e <em>quando</em>.</h2>
+      <p data-revelar data-revelar-atraso="1">
+        A clareira é um bom lugar para ver aves justamente por ser uma clareira: quem vive
+        na mata precisa cruzar o aberto, e quem vive no campo pousa na primeira árvore.
+        Boa parte da lista abaixo dá para ver sentado, sem sair da varanda.
+      </p>
+
+      <ol class="lista-aves" data-revelar data-revelar-atraso="1">
+        <li><b>Maritaca</b><span>sobre a clareira, em bando</span><i>fim de tarde</i></li>
+        <li><b>Tucano</b><span>nas árvores altas da borda</span><i>7h às 8h</i></li>
+        <li><b>Sabiá-laranjeira</b><span>perto das cabanas</span><i>primeira luz</i></li>
+        <li><b>Bem-te-vi</b><span>no mourão da cerca</span><i>o dia inteiro</i></li>
+        <li><b>Gavião-carijó</b><span>planando sobre o campo</span><i>meio-dia</i></li>
+        <li><b>Seriema</b><span>andando na grama alta</span><i>manhã e tarde</i></li>
+        <li><b>Beija-flor</b><span>nas flores da varanda</span><i>manhã</i></li>
+        <li><b>Coruja-buraqueira</b><span>no campo, junto aos cupinzeiros</span><i>anoitecer</i></li>
+      </ol>
+
+      <p class="aviso" data-revelar data-revelar-atraso="2">
+        <b>Conteúdo de demonstração.</b> A lista e os horários são ilustrativos.
+        Numa página publicada, valem os registros reais da propriedade.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- um dia aqui --------------------------------------------------------- -->
+<section class="dia mata" id="dia">
+  <div class="miolo">
+    <header class="secao__cabeca">
+      <div>
+        <p class="sobrancelha" data-revelar><span class="ponto"></span> Um dia aqui</p>
+        <h2 class="titulo-secao" data-revelar>Nenhuma<br>programação.<br><em>Só o dia.</em></h2>
+      </div>
+      <p class="secao__apoio" data-revelar data-revelar-atraso="1">
+        Ninguém vai bater na sua porta. Mas a clareira cumpre este roteiro
+        todos os dias, por conta própria.
+      </p>
+    </header>
+
+    <ol class="linha-do-tempo">
+      <li data-revelar><b>05:40</b><h3>O coro começa no escuro</h3><p>Primeiro um sabiá, depois tudo ao mesmo tempo. Dura cerca de quarenta minutos e acaba assim que o sol encosta no campo.</p></li>
+      <li data-revelar data-revelar-atraso="1"><b>07:30</b><h3>A cesta na varanda</h3><p>Pão, fruta, café e leite deixados na caixa da varanda antes das sete. Ninguém toca a campainha — não existe campainha.</p></li>
+      <li data-revelar data-revelar-atraso="1"><b>10:00</b><h3>A trilha da borda</h3><p>1,4 km rente à linha de árvores, plana, sem perigo de se perder. É onde a mata fica mais alta e mais escura.</p></li>
+      <li data-revelar data-revelar-atraso="2"><b>13:00</b><h3>A hora quieta</h3><p>Quase nada se mexe no calor. Recomendação da casa: a rede da varanda e a aceitação de que não há nada a fazer.</p></li>
+      <li data-revelar data-revelar-atraso="2"><b>16:40</b><h3>O bando volta</h3><p>As maritacas atravessam a clareira em direção à mata, sempre pelo mesmo caminho e sempre gritando. Poucas coisas são tão pontuais.</p></li>
+      <li data-revelar data-revelar-atraso="3"><b>19:20</b><h3>Lenha</h3><p>A noite esfria rápido na borda da mata. A lenha fica na varanda, seca, e a lareira pega em dez minutos.</p></li>
+      <li data-revelar data-revelar-atraso="3"><b>21:30</b><h3>Escuro de verdade</h3><p>Sem poste, sem vizinho, sem clarão de cidade no horizonte. Em noite limpa, a Via Láctea aparece a olho nu — e as corujas assumem o turno.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- comodidades --------------------------------------------------------- -->
+<section class="comodidades" id="comodidades" aria-labelledby="comodidades-titulo">
+  <div class="miolo">
+    <header class="secao__cabeca">
+      <div>
+        <p class="sobrancelha" data-revelar><span class="ponto"></span> O que tem</p>
+        <h2 class="titulo-secao" id="comodidades-titulo" data-revelar>Nas duas<br>cabanas.</h2>
+      </div>
+      <p class="secao__apoio" data-revelar data-revelar-atraso="1">
+        O que muda de uma para a outra é o tamanho e para onde a varanda olha.
+        Todo o resto abaixo está nas duas.
+      </p>
+    </header>
+
+    <ul class="itens">
+      <li data-revelar><svg aria-hidden="true"><use href="#i-varanda"/></svg><b>Varanda privativa</b><span>Com rede e sem nenhum vizinho à vista</span></li>
+      <li data-revelar><svg aria-hidden="true"><use href="#i-lenha"/></svg><b>Lareira a lenha</b><span>Lenha seca reposta todo dia na varanda</span></li>
+      <li data-revelar><svg aria-hidden="true"><use href="#i-cozinha"/></svg><b>Cozinha equipada</b><span>Fogão, geladeira, louça e utensílios</span></li>
+      <li data-revelar data-revelar-atraso="1"><svg aria-hidden="true"><use href="#i-mata"/></svg><b>Trilha própria</b><span>1,4 km rente à borda da mata</span></li>
+      <li data-revelar data-revelar-atraso="1"><svg aria-hidden="true"><use href="#i-campo"/></svg><b>Campo aberto</b><span>A clareira inteira, sem cerca interna</span></li>
+      <li data-revelar data-revelar-atraso="1"><svg aria-hidden="true"><use href="#i-binoculo"/></svg><b>Binóculo na cabana</b><span>E a lista das aves da propriedade</span></li>
+      <li data-revelar data-revelar-atraso="2"><svg aria-hidden="true"><use href="#i-wifi"/></svg><b>Wi-Fi na cabana</b><span>Estável para chamadas de vídeo</span></li>
+      <li data-revelar data-revelar-atraso="2"><svg aria-hidden="true"><use href="#i-carro"/></svg><b>Estacionamento</b><span>Gratuito, na entrada da clareira</span></li>
+      <li data-revelar data-revelar-atraso="2"><svg aria-hidden="true"><use href="#i-nao-fumar"/></svg><b>Ambiente sem fumo</b><span>Proibido fumar dentro das cabanas</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- localização --------------------------------------------------------- -->
+<section class="local" id="localizacao">
+  <div class="miolo local__grade">
+    <div class="local__texto">
+      <p class="sobrancelha" data-revelar><span class="ponto"></span> Como chegar</p>
+      <h2 class="titulo-secao" data-revelar>Estrada de terra,<br>porteira, <em>clareira</em>.</h2>
+      <p data-revelar data-revelar-atraso="1">
+        O acesso é por estrada de terra bem mantida, que qualquer carro faz em dia de sol.
+        A última porteira fica a 600 metros das cabanas; dali em diante é só campo.
+        O endereço exato e o ponto de referência vão na confirmação da reserva.
+      </p>
+      <dl class="distancias" data-revelar data-revelar-atraso="2">
+        <div><dt>Rodovia mais próxima</dt><dd>~9 km · 15 min</dd></div>
+        <div><dt>Centro da cidade</dt><dd>~18 km · 25 min</dd></div>
+        <div><dt>Mercado e farmácia</dt><dd>~16 km · 22 min</dd></div>
+        <div><dt>Posto de combustível</dt><dd>~11 km · 16 min</dd></div>
+        <div><dt>Do estacionamento à Maritaca</dt><dd>~180 m a pé</dd></div>
+        <div><dt>Do estacionamento à Tucano</dt><dd>~240 m a pé</dd></div>
+      </dl>
+      <p class="local__endereco" data-revelar data-revelar-atraso="2">
+        Zona rural · acesso por estrada de terra
+      </p>
+      <a class="botao botao--vazado" data-revelar data-revelar-atraso="3"
+         href="https://www.google.com/maps/search/?api=1&amp;query=Ref%C3%BAgio%20das%20Aves" target="_blank" rel="noopener">
+        Abrir no Google Maps <svg aria-hidden="true"><use href="#i-seta"/></svg>
+      </a>
+    </div>
+
+    <figure class="local__mapa" data-revelar data-revelar-atraso="1">
+      <div class="local__mapa-cena">
+        <img src="assets/img/mapa.svg" alt="" width="1000" height="1000" loading="lazy" decoding="async" aria-hidden="true">
+        <span class="local__alfinete local__alfinete--maritaca"><i></i>Maritaca</span>
+        <span class="local__alfinete local__alfinete--tucano"><i></i>Tucano</span>
+      </div>
+      <figcaption>Croqui da clareira e das trilhas — não use para navegação.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- hóspedes ------------------------------------------------------------ -->
+<section class="vozes mata" id="vozes" aria-labelledby="vozes-titulo">
+  <div class="miolo">
+    <header class="secao__cabeca">
+      <div>
+        <p class="sobrancelha" data-revelar><span class="ponto"></span> Hóspedes</p>
+        <h2 class="titulo-secao" id="vozes-titulo" data-revelar>O que sobra<br>na memória.</h2>
+      </div>
+      <p class="secao__apoio aviso" data-revelar data-revelar-atraso="1">
+        <b>Conteúdo de demonstração.</b> Os depoimentos abaixo são fictícios e servem apenas
+        para mostrar o layout — substitua por avaliações reais antes de publicar.
+      </p>
+    </header>
+
+    <div class="vozes__grade">
+      <blockquote data-revelar>
+        <p>Peguei a Tucano só porque a outra estava ocupada e foi a melhor coisa que me aconteceu. Acordei com a luz batendo na cama e um tucano na árvore da frente, exatamente como estava escrito no site.</p>
+        <footer><b>Camila R.</b><span>3 noites · em julho</span></footer>
+      </blockquote>
+      <blockquote data-revelar data-revelar-atraso="1">
+        <p>Levamos as duas cabanas para a família inteira. Cada um ficou no seu canto da clareira e a gente só se encontrava na fogueira, à noite. Funcionou melhor do que qualquer casa grande.</p>
+        <footer><b>Os Menezes</b><span>4 noites · em setembro</span></footer>
+      </blockquote>
+      <blockquote data-revelar data-revelar-atraso="2">
+        <p>Não sou de observar passarinho e mesmo assim passei duas manhãs com o binóculo na varanda da Maritaca. O silêncio entre um canto e outro é que pega.</p>
+        <footer><b>Henrique T.</b><span>2 noites · em maio</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- perguntas ----------------------------------------------------------- -->
+<section class="duvidas" id="perguntas" aria-labelledby="duvidas-titulo">
+  <div class="miolo duvidas__grade">
+    <div>
+      <p class="sobrancelha" data-revelar><span class="ponto"></span> Antes de reservar</p>
+      <h2 class="titulo-secao" id="duvidas-titulo" data-revelar>Dúvidas<br>frequentes.</h2>
+    </div>
+
+    <div class="sanfona" data-revelar data-revelar-atraso="1">
+      <details>
+        <summary>As duas cabanas ficam perto uma da outra?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Ficam em pontas opostas da clareira, a cerca de 200 metros uma da outra, de costas — nenhuma varanda enxerga a outra. Dá para passar um fim de semana inteiro sem cruzar com o outro hóspede.</p></div>
+      </details>
+      <details>
+        <summary>Dá para reservar as duas juntas?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Sim, e é comum em família ou grupo de amigos: a clareira inteira fica reservada e ninguém mais entra. Escolha uma das duas no formulário e diga no pedido que quer as duas — respondemos com o valor do conjunto.</p></div>
+      </details>
+      <details>
+        <summary>Preciso entender de aves para aproveitar?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Não. Tem binóculo e a lista da propriedade em cada cabana, e as aves da lista aparecem sozinhas — a maioria dá para ver da varanda, sem procurar. Quem já observa costuma preferir a Tucano, encostada na mata.</p></div>
+      </details>
+      <details>
+        <summary>Qual o horário de check-in e check-out?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Check-in a partir das 15h e check-out até as 11h. Como não há recepção, as instruções de acesso e a chave da porteira são enviadas na véspera. Chegada à noite não é problema, mas a estrada de terra é bem mais tranquila com luz.</p></div>
+      </details>
+      <details>
+        <summary>Aceitam animais de estimação?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Confirme esta política antes de reservar — numa propriedade que vive das aves, ela costuma ser restritiva. (Texto de demonstração: ajuste conforme a regra real do refúgio.)</p></div>
+      </details>
+      <details>
+        <summary>Tem sinal de celular e internet?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Wi-Fi nas duas cabanas, estável o bastante para chamadas de vídeo. O sinal de celular varia conforme a operadora e some dentro da mata — o que, para a maioria das pessoas, é parte do motivo de vir.</p></div>
+      </details>
+      <details>
+        <summary>Qual a melhor época do ano?<svg aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <div><p>Para as aves, o começo da primavera, quando a mata está mais ativa. Para o campo, o fim do outono: grama alta, noites frias e céu limpo para as estrelas. Não existe mês ruim — existem meses diferentes.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- convite ------------------------------------------------------------- -->
+<section class="convite mata" id="convite">
+  <img class="convite__fundo" src="assets/img/convite.svg" alt="" width="1920" height="900" loading="lazy" decoding="async" aria-hidden="true">
+  <div class="miolo convite__texto">
+    <h2 data-revelar>O bando passa<br>todo fim de tarde.<br><em>Você, nem tanto.</em></h2>
+    <a class="botao botao--solido botao--grande" href="#reserva" data-revelar data-revelar-atraso="1">
+      Consultar datas <svg aria-hidden="true"><use href="#i-seta"/></svg>
+    </a>
+    <p data-revelar data-revelar-atraso="2">duas cabanas · a partir de R$&nbsp;540 a diária · cancelamento gratuito até 48&nbsp;h antes</p>
+  </div>
+</section>
+
+</main>
+
+<!-- rodapé -------------------------------------------------------------- -->
+<footer class="rodape">
+  <div class="miolo rodape__grade">
+    <div class="rodape__marca">
+      <svg class="marca__sinal" viewBox="0 0 40 40" aria-hidden="true" fill="none">
+        <circle cx="20" cy="20" r="18.4" stroke="currentColor" stroke-width="1.1" opacity=".45"/>
+        <path d="M6.4,29.4 A4.1,3.6 0 0 1 14.6,29.4 Z M13.4,29.4 A5.4,4.8 0 0 1 24.2,29.4 Z M23,29.4 A4.4,3.9 0 0 1 31.8,29.4 Z" fill="currentColor" opacity=".38"/>
+        <path d="M5.6,29.4 H34.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".45"/>
+        <path d="M12.4,18.8 C15,14.6 17.4,15.4 19.8,18.2 C22.2,15.4 24.6,14.6 27.2,18.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p>Refúgio das Aves<br><span>Cabana Maritaca · Cabana Tucano</span></p>
+    </div>
+
+    <nav aria-label="Rodapé">
+      <h3>Navegar</h3>
+      <a href="#refugio">O refúgio</a>
+      <a href="#maritaca">Cabana Maritaca</a>
+      <a href="#tucano">Cabana Tucano</a>
+      <a href="#aves">As aves</a>
+      <a href="#dia">Um dia aqui</a>
+      <a href="#localizacao">Como chegar</a>
+      <a href="#perguntas">Dúvidas</a>
+    </nav>
+
+    <div>
+      <h3>Contato</h3>
+      <p>Zona rural, acesso por estrada de terra.<br>Endereço exato na confirmação.</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Ref%C3%BAgio%20das%20Aves" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+
+    <div>
+      <h3>Reservas</h3>
+      <p>O pedido vai por WhatsApp ou e-mail, já preenchido. A confirmação vem na resposta.</p>
+      <a class="botao botao--solido botao--pequeno" href="#reserva">Consultar datas</a>
+    </div>
+  </div>
+
+  <div class="miolo rodape__base">
+    <p><b>Demonstração.</b> Página-conceito criada como amostra de design. Nomes, textos, valores,
+       depoimentos, distâncias e imagens são ilustrativos e não constituem oferta.
+       As imagens são ilustrações vetoriais geradas para o projeto, não fotografias da propriedade.</p>
+    <p>© <span id="ano">2026</span> Refúgio das Aves</p>
+  </div>
+</footer>
+
+<div class="grao" aria-hidden="true"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Refúgio das Aves",
+  "description": "Duas cabanas numa clareira entre o campo aberto e a borda da mata: a Cabana Maritaca, voltada para o campo, e a Cabana Tucano, encostada nas árvores altas.",
+  "priceRange": "R$$",
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "numberOfRooms": 2,
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Estacionamento privativo gratuito", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Cozinha equipada", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Lareira a lenha", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Varanda privativa", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Trilha na propriedade", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Proibido fumar", "value": true }
+  ],
+  "containsPlace": [
+    {
+      "@type": "Accommodation",
+      "name": "Cabana Maritaca",
+      "description": "Cabana de duas águas voltada para o campo aberto, com varanda a oeste.",
+      "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
+      "floorSize": { "@type": "QuantitativeValue", "value": 38, "unitCode": "MTK" }
+    },
+    {
+      "@type": "Accommodation",
+      "name": "Cabana Tucano",
+      "description": "Cabana de água única encostada na borda da mata, com faixa de vidro a leste.",
+      "occupancy": { "@type": "QuantitativeValue", "maxValue": 4 },
+      "floorSize": { "@type": "QuantitativeValue", "value": 56, "unitCode": "MTK" }
+    }
+  ]
+}
+</script>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
