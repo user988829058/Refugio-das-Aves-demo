@@ -25,9 +25,8 @@ convite final — para quebrar o ritmo da rolagem.
   etiqueta da foto, no itálico do título e no marcador da tabela comparativa.
   Os tokens ficam em `:root`; a classe `.mata` troca só os papéis semânticos e a
   página inteira se adapta, sem sobrescrever nenhum componente.
-- **Imagens** — nenhuma foto de banco de imagens. As onze cenas e o croqui são
-  SVGs gerados por `tools/gerar-cenas.mjs`. Não há água em nenhuma delas: a
-  propriedade não tem.
+- **Imagens** — fotos da própria propriedade. O croqui da clareira e a cena da
+  seção “As aves” continuam sendo SVGs gerados por `tools/gerar-cenas.mjs`.
 
 ## Estrutura
 
@@ -69,10 +68,10 @@ const CABANAS = {
 ```
 
 Fora daí, ainda são de demonstração e precisam de revisão: os preços repetidos
-no HTML (herói, fichas, tabela e convite), a lista de aves e seus horários, os
-depoimentos, as distâncias da seção “Como chegar” e o link do Google Maps (hoje
-é uma **busca** pelo nome, nunca um endereço errado — troque por coordenadas
-reais).
+no HTML (herói, fichas, tabela e convite), as metragens e o número de camas de
+cada cabana, a lista de aves e seus horários, os depoimentos, as distâncias da
+seção “Como chegar” e o link do Google Maps (hoje é uma **busca** pelo nome,
+nunca um endereço errado — troque por coordenadas reais).
 
 ## Como funciona a reserva
 
@@ -85,30 +84,33 @@ O contador de hóspedes respeita a lotação da cabana escolhida: trocar da Tuca
 (até 4) para a Maritaca (até 3) reduz o número sozinho. Os botões “Consultar a
 Maritaca / a Tucano”, nas fichas, escolhem a cabana antes de levar ao formulário.
 
-## Quando as fotos chegarem
+## As fotos
 
-Cada imagem já tem o nome do arquivo que a substitui. Basta colocar o arquivo em
-`assets/img/` — a página testa o carregamento antes de usar. Se o arquivo não
-existir, a ilustração continua no lugar: sem imagem quebrada e sem salto de
-layout.
+As fotos da propriedade estão em `assets/img/`, com nomes que dizem onde cada
+uma entra. O prefixo separa o que é de cada cabana do que é comum às duas:
 
-| Onde | Arquivo esperado | Proporção |
-| --- | --- | --- |
-| Herói | `foto-heroi.webp` | 16:9 |
-| Cabana Maritaca | `foto-maritaca.webp` | 4:5 |
-| Cabana Tucano | `foto-tucano.webp` | 4:5 |
-| Seção “As aves” | `foto-aves.webp` | 4:5 |
-| Galeria (em pé) | `foto-galeria-1/3/5.webp` | 4:5 |
-| Galeria (deitada) | `foto-galeria-2/4/6.webp` | 7:5 |
+| Prefixo | Onde aparece |
+| --- | --- |
+| `maritaca-*` | bloco da Cabana Maritaca e galeria |
+| `tucano-*` | bloco da Cabana Tucano e galeria |
+| `comum-*` | seção “Área comum” e galeria — **iguais nas duas cabanas** |
+| `entorno-*` | galeria e fundo do convite |
 
-O herói é o único caso especial: além de trocar a imagem, ele escurece um pouco
-mais o véu, porque céu de foto tem muito mais contraste que o da ilustração e o
-título precisa continuar legível. O enquadramento fica em `.heroi__foto`
-(`background-position`, hoje `50% 52%`) e o nome do arquivo é a constante
-`FOTO_HEROI`, em `assets/js/main.js`.
+Estão em AVIF (e uma em WebP), servidas direto, sem etapa de build. A única
+imagem que ainda é ilustração é a da seção “As aves” (`aves.svg`): se um dia
+houver uma foto de ave feita na propriedade, basta salvá-la como
+`assets/img/foto-aves.webp` — a página testa o carregamento e troca sozinha,
+sem alteração de código.
 
-As demais imagens estão em `<img>` comuns, com `width`, `height` e `alt` já
-preenchidos — o `object-fit: cover` das molduras cuida do resto.
+### Uma ressalva sobre resolução
+
+A foto do herói (`maritaca-fachada-mata.avif`) tem **480 × 854 px**. Num monitor
+grande ela é ampliada cerca de 3× e fica visivelmente macia; o véu escuro do
+herói disfarça boa parte, mas não tudo. Se existir o original da câmera, vale
+reexportá-lo com pelo menos 1920 px de largura e substituir o arquivo — o nome
+e o recorte continuam os mesmos. Vale o mesmo para as fotos de 240 px da Tucano
+(`tucano-rede`, `tucano-lareira`), que aparecem pequenas na galeria justamente
+por isso.
 
 ## Regerar as imagens
 
@@ -119,9 +121,9 @@ rodar de novo produz exatamente os mesmos arquivos.
 node tools/gerar-cenas.mjs
 ```
 
-Para variar uma cena, mude a `seed` (ou a paleta, ou o número de camadas) na
-lista `CENAS` no fim do arquivo. Paletas disponíveis: `alvorada`, `bruma`,
-`dourada`, `mata`, `noite`.
+Com as fotos no ar, a lista `CENAS` no fim do arquivo produz só a cena das aves.
+As demais continuam possíveis — basta acrescentar uma linha com nome, semente e
+paleta. Paletas disponíveis: `alvorada`, `bruma`, `dourada`, `mata`, `noite`.
 
 Cada cena é montada em camadas: céu, aves altas, faixas de mata (copas
 arredondadas com araucárias e palmeiras emergentes), bruma entre as faixas, o

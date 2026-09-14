@@ -20,8 +20,8 @@
   };
 
   const CABANAS = {
-    maritaca: { nome: 'Cabana Maritaca', diaria: 540, maximo: 3 },
-    tucano:   { nome: 'Cabana Tucano',   diaria: 690, maximo: 4 },
+    maritaca: { nome: 'Cabana Maritaca', diaria: 590, maximo: 4 },
+    tucano:   { nome: 'Cabana Tucano',   diaria: 540, maximo: 4 },
     qualquer: { nome: 'qualquer uma das duas', diaria: 540, maximo: 4 },
   };
 
@@ -112,9 +112,10 @@
 
   /* ----------------------------------------------- fotos da propriedade -- */
 
-  /* Cada foto entra sozinha: basta o arquivo existir em assets/img/ com o nome
-     esperado. Se não existir, a ilustração continua no lugar — sem ícone de
-     imagem quebrada e sem nenhuma alteração de layout. */
+  /* As fotos das cabanas e da área comum já estão no HTML. O que sobra aqui é a
+     cena ilustrada das aves, que ainda espera uma foto: basta o arquivo existir
+     em assets/img/ com o nome esperado. Se não existir, a ilustração continua no
+     lugar — sem ícone de imagem quebrada e sem alteração de layout. */
 
   const existe = (caminho) => new Promise((resolve) => {
     const teste = new Image();
@@ -123,22 +124,7 @@
     teste.src = caminho;
   });
 
-  const FOTO_HEROI = 'assets/img/foto-heroi.webp';
-
-  const heroi = $('#heroi');
-  if (heroi) {
-    existe(FOTO_HEROI).then((ok) => {
-      if (!ok) return;
-      // URL absoluta de propósito: um caminho relativo dentro de uma custom
-      // property é resolvido a partir do CSS que a consome (assets/css/), não
-      // a partir da página.
-      const endereco = new URL(FOTO_HEROI, document.baseURI).href;
-      heroi.style.setProperty('--foto-heroi', `url("${endereco}")`);
-      heroi.classList.add('heroi--foto');
-    });
-  }
-
-  /* As demais imagens declaram no HTML o arquivo que as substitui. */
+  /* A imagem declara no HTML o arquivo que a substitui. */
   $$('[data-foto]').forEach((img) => {
     const caminho = `assets/img/${img.dataset.foto}`;
     existe(caminho).then((ok) => {

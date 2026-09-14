@@ -535,24 +535,11 @@ ${corpo.join('\n')}
 
 /* ----------------------------------------------------------------- cenas --- */
 
+/* Com as fotos da propriedade no ar, a única cena que a página ainda usa é a
+   das aves — as demais continuam possíveis: basta acrescentar uma linha aqui
+   com um nome, uma semente e uma paleta. */
 const CENAS = [
-  ['heroi', { seed: 31071, largura: 1920, altura: 1080, paleta: 'alvorada', camadas: 6, horizonte: 0.66, aves: 11, neblina: 1, trilha: true, astro: { x: 0.72, y: 0.19, r: 42 } }],
-
-  /* Uma cena por cabana, com a silhueta que corresponde a cada uma. */
-  ['cabana-maritaca', { seed: 5201, largura: 1200, altura: 1500, paleta: 'dourada', camadas: 4, horizonte: 0.66, cabana: 'duas-aguas', cabanaEm: { x: 0.44, y: 0.24, escala: 1.55 }, aves: 5, neblina: 0.5, astro: { x: 0.24, y: 0.18, r: 38 } }],
-  ['cabana-tucano', { seed: 5202, largura: 1200, altura: 1500, paleta: 'mata', camadas: 5, horizonte: 0.66, cabana: 'agua-unica', cabanaEm: { x: 0.5, y: 0.26, escala: 1.55 }, aves: 4, neblina: 0.45, astro: { x: 0.76, y: 0.14, r: 30 } }],
-
-  ['galeria-1', { seed: 2101, largura: 1000, altura: 1250, paleta: 'bruma', camadas: 5, horizonte: 0.6, aves: 6, neblina: 1, astro: { x: 0.34, y: 0.18, r: 30 } }],
-  ['galeria-2', { seed: 2102, largura: 1400, altura: 1000, paleta: 'dourada', camadas: 4, horizonte: 0.58, cabana: 'duas-aguas', cabanaEm: { x: 0.3, y: 0.24 }, aves: 7, neblina: 0.6, trilha: true, astro: { x: 0.68, y: 0.22, r: 44 } }],
-  ['galeria-3', { seed: 2103, largura: 1000, altura: 1250, paleta: 'mata', camadas: 5, horizonte: 0.72, aves: 4, neblina: 0.4, astro: { x: 0.7, y: 0.1, r: 24 } }],
-  ['galeria-4', { seed: 2104, largura: 1400, altura: 1000, paleta: 'noite', camadas: 4, horizonte: 0.62, cabana: 'agua-unica', cabanaEm: { x: 0.62, y: 0.26 }, aves: 0, estrelas: true, neblina: 0.3, astro: { x: 0.78, y: 0.18, r: 28 } }],
-  ['galeria-5', { seed: 2105, largura: 1000, altura: 1250, paleta: 'alvorada', camadas: 5, horizonte: 0.64, aves: 8, neblina: 0.7, astro: { x: 0.3, y: 0.26, r: 40 } }],
-  ['galeria-6', { seed: 2106, largura: 1400, altura: 1000, paleta: 'bruma', camadas: 5, horizonte: 0.68, cabana: 'agua-unica', cabanaEm: { x: 0.68, y: 0.22 }, aves: 5, neblina: 1, trilha: true, astro: { x: 0.5, y: 0.14, r: 26 } }],
-
-  /* Só céu e bando: é a cena que abre a seção das aves. */
   ['aves', { seed: 7720, largura: 1000, altura: 1250, paleta: 'bruma', camadas: 4, horizonte: 0.92, aves: 30, neblina: 0.8, astro: { x: 0.68, y: 0.2, r: 34 } }],
-
-  ['convite', { seed: 6640, largura: 1920, altura: 900, paleta: 'noite', camadas: 5, horizonte: 0.68, cabana: 'duas-aguas', cabanaEm: { x: 0.26, y: 0.34, escala: 1.25 }, aves: 0, estrelas: true, neblina: 0.35, astro: { x: 0.2, y: 0.2, r: 32 } }],
 ];
 
 mkdirSync(SAIDA, { recursive: true });

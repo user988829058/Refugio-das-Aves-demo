@@ -386,36 +386,20 @@ button, input, select { font: inherit; color: inherit; }
   object-position: 50% 58%;
 }
 
-/* A foto da propriedade, quando existir, cobre a ilustração. O JS só define
-   --foto-heroi depois de confirmar que o arquivo carrega: sem foto, nada muda
-   e a cena gerada continua sendo o herói. */
-.heroi__foto {
-  position: absolute; inset: 0;
-  background-image: var(--foto-heroi, none);
-  background-size: cover;
-  background-position: 50% 52%;
-  filter: saturate(.93) contrast(1.03) brightness(.9);
-}
+/* O herói é uma foto da propriedade. Céu de foto é mais claro e mais movimentado
+   que o de uma ilustração: o véu escurece o topo (onde fica o cabeçalho) e o
+   canto do título, sem apagar a imagem. */
 .heroi__veu {
   position: absolute; inset: 0;
   z-index: -1;
   pointer-events: none;
-  transition: background 600ms ease;
   background:
-    linear-gradient(to bottom, rgba(14,23,18,.76) 0%, rgba(14,23,18,.3) 15%, rgba(14,23,18,0) 32%, rgba(14,23,18,.42) 62%, var(--mata-900) 97%),
-    linear-gradient(to right, rgba(14,23,18,.6), rgba(14,23,18,.08) 62%);
+    linear-gradient(to bottom, rgba(14,23,18,.86) 0%, rgba(14,23,18,.4) 16%, rgba(14,23,18,.14) 32%, rgba(14,23,18,.66) 66%, var(--mata-900) 97%),
+    linear-gradient(to right, rgba(14,23,18,.82), rgba(14,23,18,.3) 54%, rgba(14,23,18,.06) 84%);
 }
-/* Céu de foto é mais claro e mais movimentado que o da ilustração: escurece o
-   topo (onde fica o cabeçalho) e o canto do título, sem apagar a imagem. */
-.heroi--foto .heroi__veu {
-  background:
-    linear-gradient(to bottom, rgba(14,23,18,.86) 0%, rgba(14,23,18,.4) 16%, rgba(14,23,18,.12) 32%, rgba(14,23,18,.66) 66%, var(--mata-900) 97%),
-    linear-gradient(to right, rgba(14,23,18,.8), rgba(14,23,18,.28) 54%, rgba(14,23,18,.04) 84%);
-}
-.heroi--foto .bruma { opacity: .35; }
+.bruma { opacity: .35; }
 
-/* Fotos reais chegam mais saturadas e mais claras que as cenas geradas. Esta
-   correção aproxima as duas enquanto nem todas tiverem substituto fotográfico. */
+/* Foto real chega mais saturada e mais clara que a cena gerada ao lado. */
 img.tem-foto { filter: saturate(.92) contrast(1.03) brightness(.97); }
 
 .bruma { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; }
@@ -655,9 +639,16 @@ img.tem-foto { filter: saturate(.92) contrast(1.03) brightness(.97); }
   margin: 0;
   overflow: hidden;
   background: var(--papel-400);
+  /* Cada cabana tem a proporção da foto que a representa: a Maritaca é uma
+     fachada em pé, a Tucano é a varanda deitada. Forçar as duas na mesma
+     moldura cortaria justamente o que distingue uma da outra. */
   aspect-ratio: 4 / 5;
 }
+.cabana__cena--larga { aspect-ratio: 16 / 11; }
 .cabana__cena img { width: 100%; height: 100%; object-fit: cover; }
+/* Numa foto em pé o assunto está em cima: centralizar o recorte cortaria a
+   cabana e deixaria o gramado. */
+.cabana__cena img.recorte-alto { object-position: 50% 26%; }
 .cabana__etiqueta {
   position: absolute; left: 1rem; top: 1rem;
   z-index: 1;
@@ -783,6 +774,53 @@ img.tem-foto { filter: saturate(.92) contrast(1.03) brightness(.97); }
   color: var(--texto-suave);
   max-width: 56ch;
 }
+
+/* ---------------------------------------------------------- área comum -- */
+
+.comum { padding-block: var(--respiro); }
+.comum__grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+}
+.comum__cena { margin: 0; }
+.comum__cena img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--papel-400);
+}
+.comum__cena--principal img { aspect-ratio: 4 / 3; }
+.comum__cena figcaption {
+  margin-top: .85rem;
+  font-size: var(--t-micro);
+  letter-spacing: .08em;
+  color: var(--texto-suave);
+}
+
+.comum__itens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+  padding: clamp(1.75rem, 3vw, 2.25rem) 0 0;
+  list-style: none;
+  border-top: 1px solid var(--linha);
+}
+.comum__itens li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: .15rem 1rem;
+}
+.comum__itens svg {
+  grid-row: span 2;
+  width: 24px; height: 24px;
+  fill: none; stroke: var(--realce); stroke-width: 1.4;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.comum__itens b { font-size: .9375rem; font-weight: 600; align-self: end; }
+.comum__itens span { font-size: var(--t-menor); line-height: 1.5; color: var(--texto-suave); }
 
 /* -------------------------------------------------------------- galeria -- */
 
@@ -1240,6 +1278,9 @@ img.tem-foto { filter: saturate(.92) contrast(1.03) brightness(.97); }
   .refugio__lado { position: sticky; top: 7.5rem; align-self: start; }
 
   .aves__grade { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+
+  .comum__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .comum__cena--principal { grid-column: 1 / -1; }
   .aves__cena { position: sticky; top: 7.5rem; }
 
   .linha-do-tempo li { grid-template-columns: 6rem minmax(0, 1fr); gap: .35rem 2rem; }
